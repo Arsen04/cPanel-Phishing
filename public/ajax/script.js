@@ -43,11 +43,11 @@ $(document).ready(function() {
 
                 $('.dashboard-content').html(jsonDataHtml);
             }
-            // Clear the previous data (if any)
+           
         }).fail(function(jqXHR, textStatus, errorThrown) {
-            // Handle AJAX request failure
+            
             console.error('AJAX Error:', textStatus, errorThrown);
-            // Display an error message in the dashboard-content div
+            
             $('.dashboard-content').html('<p>Error: Unable to fetch data from the server.</p>');
         });
     });
