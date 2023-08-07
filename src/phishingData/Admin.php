@@ -22,8 +22,7 @@ class Admin extends Database{
     }
     public function loginUser($login, $password) {
         $conn = $this->getConnection();
-
-        // Retrieve the hashed password from the database based on the provided login
+        
         $sql = "SELECT password FROM admin WHERE login = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("s", $login);
@@ -31,16 +30,16 @@ class Admin extends Database{
         $result = $stmt->get_result();
 
         if ($result->num_rows === 1) {
-            // If a matching record is found, verify the password
+
             $row = $result->fetch_assoc();
             $hashedPassword = $row['password'];
 
             if (password_verify($password, $hashedPassword)) {
-                return true; // Password is correct, login successful
+                return true;
             }
         }
         else{
-            return false; // Login failed
+            return false; 
         }
     }
 }
