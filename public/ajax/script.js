@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $('.choose').click(function(event) {
-        event.preventDefault(); // Prevent page reload on anchor link click
+        event.preventDefault(); 
         let table = $(this).attr('data-table');
         $.post('../phishingData/data-control.php', {
             table: table,
