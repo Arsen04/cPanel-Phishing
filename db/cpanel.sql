@@ -44,9 +44,7 @@ INSERT INTO `account` (`login`, `password`, `id`) VALUES
 ('kjhlihihihiohio', 'gigugguigugugu', 42),
 ('user@pihohiohohihihio.com', ';jojopjojojopjopjop', 43),
 ('admin', 'admin', 44),
-('\'admin', 'admin', 45),
-('admin\' OR \'a\'=\'a', 'ss', 46),
-('Shdhdhhdhdhd', 'dhdhdhhdhd', 47);
+('Shdhdhhdhdhd', 'dhdhdhhdhd', 45);
 
 -- --------------------------------------------------------
 
